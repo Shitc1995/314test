@@ -86,7 +86,7 @@ export default {
   mounted() {
     let me = this
     this.resizeFunction()
-    this.chartWidth = this.videoHeight / 2
+    this.chartWidth = this.videoHeight > 300 ? 150 : Math.floor(this.videoHeight / 2)
     window.addEventListener('resize', this.resizeFunction, true);
     window.addEventListener('scroll', this.scrollFunction, true);
     setTimeout(function () {
